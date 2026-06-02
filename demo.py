@@ -18,15 +18,7 @@
 #     logging.info(e)
 #     raise MyException(e, sys) from e
 
-# from src.pipline.training_pipeline import TrainPipeline
+from src.pipline.training_pipeline import TrainPipeline
 
-# pipline = TrainPipeline()
-# pipline.run_pipeline()
-
-from src.entity.config_entity import DataIngestionConfig, training_pipeline_config
-print("==========================")
-print(training_pipeline_config)
-print(training_pipeline_config.artifact_dir)
-print(DataIngestionConfig().feature_store_file_path)
-print(DataIngestionConfig().training_file_path)
-print(DataIngestionConfig().testing_file_path)
+pipline = TrainPipeline()
+pipline.run_pipeline()
